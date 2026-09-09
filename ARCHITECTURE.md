@@ -671,3 +671,131 @@ Collected decisions that might look arbitrary:
 - **Setup and infrastructure in the engine package.** Shim scripts in
   the agent repo stay stable. Logic lives behind pip so updates
   deliver new behavior to every agent.
+
+
+## Files Trees
+
+bountiful/
+├── .github/
+│   └── FUNDING.yml
+├── .gitignore
+├── ARCHITECTURE.md
+├── LICENSE
+├── README.md
+├── add_secrets.py
+├── add_tools.py
+├── build.py
+├── config.toml
+├── dashboard.json
+├── persona.md
+├── pyproject.toml
+├── run.py
+└── tools/
+    └── README.md
+
+
+basic-bot/
+├── .github/
+│   └── FUNDING.yml
+├── .gitignore
+├── ARCHITECTURE.md
+├── LICENSE
+├── README.md
+├── pyproject.toml
+├── basic_bot/
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── chat.py
+│   ├── config.py
+│   ├── diagnostics.py
+│   ├── embeddings.py
+│   ├── factory.py
+│   ├── fold.py
+│   ├── memory.py
+│   ├── profile.py
+│   ├── rag.py
+│   ├── runtime.py
+│   ├── secrets_env.py
+│   ├── store.py
+│   ├── store_sqlite.py
+│   ├── summary.py
+│   ├── tools.py
+│   ├── infrastructure/
+│   │   ├── __init__.py
+│   │   ├── llamacpp.py
+│   │   ├── orchestration.py
+│   │   └── server.py
+│   ├── instructions/
+│   │   └── capabilities.md
+│   ├── profiles/
+│   │   └── nvidia_12gb.toml
+│   ├── providers/
+│   │   ├── __init__.py
+│   │   ├── claude.py
+│   │   ├── local.py
+│   │   └── protocol.py
+│   ├── setup/
+│   │   ├── __init__.py
+│   │   ├── secrets.py
+│   │   └── tools.py
+│   └── tool_belt/
+│       ├── __init__.py
+│       ├── recall_message.py
+│       └── search_archive.py
+└── scripts/
+    ├── backfill_rag.py
+    ├── backfill_seq.py
+    ├── rebuild_summary.py
+    ├── reembed.py
+    ├── test_fold.py
+    ├── test_fold_lifecycle.py
+    └── test_rag.py
+
+
+basic-ui/
+├── .github/
+│   └── FUNDING.yml
+├── ARCHITECTURE.md
+├── LICENSE
+├── README.md
+├── pyproject.toml
+└── basic_ui/
+    ├── __init__.py
+    ├── app.py
+    ├── config.py
+    ├── launch.py
+    ├── static/
+    │   ├── css/
+    │   │   └── styles.css
+    │   └── js/
+    │       ├── chat.js
+    │       ├── globals.d.ts
+    │       └── jsconfig.json
+    └── templates/
+        └── index.html
+
+
+extend-a-bot/
+├── .github/
+│   └── FUNDING.yml
+├── .gitignore
+├── ARCHITECTURE.md
+├── LICENSE
+├── README.md
+├── version.json
+└── github/
+    ├── _auth.py
+    ├── _config.py
+    ├── create_branch.py
+    ├── create_or_update_file.py
+    ├── create_pull_request.py
+    ├── delete_branch.py
+    ├── delete_file.py
+    ├── get_commit_history.py
+    ├── get_repo_info.py
+    ├── list_branches.py
+    ├── list_repo_contents.py
+    ├── list_repos.py
+    ├── merge_pull_request.py
+    ├── read_file.py
+    └── tool.json
