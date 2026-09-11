@@ -173,16 +173,16 @@ MODEL section), calls `runtime.chat_provider.chat()`, and handles
 the tool execution loop. Tool calls and results stay in the engine's
 internal format; the provider translates at the boundary.
 
-### System Prompt Structure
+## System Prompt Structure
 
 Markdown headings that models navigate by section name:
 
 ```
-# PERSONA        (from persona.md)
+# PERSONA        (from persona.md in user's agent repo)
 # CAPABILITIES   (engine-owned, from instructions/capabilities.md)
-# MODEL          (injected — model, family, effort, thinking,
+# MODEL          (engine-owned, injected from chat.py. Contains model, family, effort, thinking,
                   tool count, sorted tool names)
-# MEMORY         (injected — rolling summary, window position)
+# MEMORY         (engine- owned, injected from chat.py. Contains rolling summary, window position)
 ```
 
 The MODEL section includes explicit tool count and sorted tool names
